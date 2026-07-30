@@ -24,7 +24,7 @@ function Secondary() {
           <p>{counter}</p>
         </div>
 
-        <div className={`${style.box} ${style.box3}`}>
+        <div className={`${style.box} ${style.box2}`}>
           
          <div className={`${style.auc}  ${appearance ? style.shown : '' }`} >
           <h2>Game Guide <div className={style.aucbtn} onClick={handleAucBtn}></div> </h2>

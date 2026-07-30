@@ -35,8 +35,8 @@
   overflow-y: scroll;
   scrollbar-width: none;
   display: flex;
-  justify-content: top;
-  align-items: left;
+  justify-content: left;
+  align-items: top;
   gap: 1rem;
   flex-direction: column;
   padding-left: 0.7rem;
@@ -54,6 +54,7 @@
   flex-direction: column;
   font-size: clamp(0.75rem, 1vw, 1.5rem);
   border: 1px solid var(--text-color);
+  margin-right:0.5rem;
 }
 
 .sorting {
@@ -102,6 +103,7 @@
 
 .sorting {
   width: 30%;
+  min-width: 0;
   height: 100%;
   display: flex;
   justify-content: center;
@@ -149,9 +151,9 @@ button:hover {
   height: 100%;
   display: flex;
   justify-content: left;
-  align-items: left;
+  align-items: top;
   flex-direction: column;
-  flex-wrap: wrap;
+  flex-wrap: normal;
 }
 .questBtns {
   width: 33%;
@@ -165,7 +167,7 @@ button:hover {
 .questBtns button {
   padding: 5px;
   border-radius: 5px;
-  white-space: wrap;
+  white-space: normal;
   width: 50%;
   display: flex;
   justify-content: center;
@@ -182,6 +184,7 @@ button:hover {
 @media screen and (max-width: 760px) {
   .options {
     width: 100%;
+    min-width:0px;
     height: 25%;
     display: flex;
     justify-content: left;
@@ -190,7 +193,11 @@ button:hover {
     overflow-x: scroll;
     scrollbar-width: thin;
   }
-
+   
+  .options button{
+    padding:1rem;
+    min-width:20px;
+  }
   .questBtns {
     width: 33%;
     height: 100%;
@@ -204,7 +211,7 @@ button:hover {
   .questBtns button {
   padding: 5px;
   border-radius: 5px;
-  white-space: wrap;
+  white-space: normal;
   width: 75%;
   display: flex;
   justify-content: center;
@@ -212,5 +219,17 @@ button:hover {
   font-size: clamp(0.4rem,1.5vw,1rem);
   border-radius: 0;
   overflow-wrap: break-word;
+ 
 }
+
+.sorting{
+  gap:5px;
+  margin-left:0rem;
+}
+}
+
+@media screen and (max-width: 460px) {
+  .addButton{
+    margin-right:2rem;
+  }
 }
